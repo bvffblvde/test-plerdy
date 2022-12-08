@@ -2,8 +2,6 @@ import React from "react";
 import PopUp from "../../pop-up";
 import {Card, LogoArea, LogoCompany, TextAbout, Title} from "./styles";
 import {colors} from "../../theme/default/styles";
-import SoftServeLogo from "../../icons/other-company-logo/softserve";
-import SubaruLogo from "../../icons/other-company-logo/sybaru";
 
 class Dashboard extends React.Component {
     render() {
