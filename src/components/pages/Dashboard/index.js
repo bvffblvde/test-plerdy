@@ -1,6 +1,6 @@
 import React from "react";
 import PopUp from "../../pop-up";
-import {Card, LogoArea, LogoCompany, TextAbout, Title} from "./styles";
+import {Card, LogoArea, LogoCompany, ReasonsArea, TextAbout, Title} from "./styles";
 import {colors} from "../../theme/default/styles";
 import SwiperBar from "../../Slider";
 import {Button} from "../../pop-up/styles";
@@ -39,8 +39,23 @@ class Dashboard extends React.Component {
                                      alt="ukr-post-logo"/>
                     </LogoArea>
                 </Card>
+                <>
+                    <ReasonsArea>
+                        <TextAbout marginTop="0" fontSize="20px">
+                            6 Reasons <span
+                            className="default-text"> to Use Plerdy Data for a Website Usability Audit </span>
+                        </TextAbout>
+
+                    </ReasonsArea>
+                </>
                 <SwiperBar/>
-                <Button>Bust my website conversion</Button>
+                <div>
+                    <Button>Bust my website conversion</Button>
+                    <TextAbout color={colors.midnight} margin="10px">
+                        So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your
+                        website users’ behavior patterns and needs.
+                    </TextAbout>
+                </div>
             </div>
         );
     }

@@ -22,6 +22,7 @@ export const Title = styled.span`
 
 export const TextAbout = styled.div`
   margin-top: ${props => props.marginTop || '20px'};
+  margin: ${props => props.margin};
   color: ${props => props.color || colors.midnight};
   font-family: 'Roboto', serif;
   font-style: normal;
@@ -29,6 +30,10 @@ export const TextAbout = styled.div`
   font-size: ${props => props.fontSize || '12px'};
   line-height: 14px;
   text-align: ${props => props.textAlign || 'left'};
+  
+  .default-text {
+    color: ${colors.sooGray};
+  }
 `;
 
 export const LogoArea = styled.div`
@@ -41,4 +46,8 @@ export const LogoArea = styled.div`
 
 export const LogoCompany = styled.img`
   margin: 5px;
+`;
+
+export const ReasonsArea = styled.div`
+ margin: 40px 10px 0;
 `;

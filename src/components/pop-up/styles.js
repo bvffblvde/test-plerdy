@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {colors} from "../theme/default/styles";
 
 export const Button = styled.button`
-  margin: 20px auto;
+  margin: 20px auto 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
