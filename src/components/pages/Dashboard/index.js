@@ -28,11 +28,15 @@ class Dashboard extends React.Component {
                         Trusted by some of the world's largest enterprises
                     </TextAbout>
                     <LogoArea>
-                        <LogoCompany src={require('../../icons/default-icons/softServeLogo.svg').default}  alt="soft-serve-logo"/>
-                        <LogoCompany src={require('../../icons/default-icons/subaruLogo.svg').default}  alt="subaru-logo"/>
-                        <LogoCompany src={require('../../icons/default-icons/anex-tour-logo.svg').default}  alt="anex-tour-logo"/>
-                        <LogoCompany src={require('../../icons/default-icons/promLogo.svg').default}  alt="prom-logo"/>
-                        <LogoCompany src={require('../../icons/default-icons/urkPostLogo.svg').default}  alt="ukr-post-logo"/>
+                        <LogoCompany src={require('../../icons/default-icons/softServeLogo.svg').default}
+                                     alt="soft-serve-logo"/>
+                        <LogoCompany src={require('../../icons/default-icons/subaruLogo.svg').default}
+                                     alt="subaru-logo"/>
+                        <LogoCompany src={require('../../icons/default-icons/anex-tour-logo.svg').default}
+                                     alt="anex-tour-logo"/>
+                        <LogoCompany src={require('../../icons/default-icons/promLogo.svg').default} alt="prom-logo"/>
+                        <LogoCompany src={require('../../icons/default-icons/urkPostLogo.svg').default}
+                                     alt="ukr-post-logo"/>
                     </LogoArea>
                 </Card>
                 <SwiperBar/>

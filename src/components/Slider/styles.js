@@ -3,10 +3,9 @@ import {colors} from "../theme/default/styles";
 
 export const SliderCard = styled.div`
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
+  height: 372px;
   background-color: ${colors.athensGray};
-  margin: 30px 10px;
+  margin: 40px 10px;
   padding: 20px;
   gap: 20px;
   isolation: isolate;
