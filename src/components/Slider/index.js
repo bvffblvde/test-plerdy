@@ -9,7 +9,8 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/grid';
 
 import {A11y, EffectCards, Grid, Navigation, Pagination, Scrollbar} from "swiper";
-import {SliderCard} from "./styles";
+import {CircleWithNumber, SliderCard, SubTitleSlide, TitleSlide} from "./styles";
+import {colors} from "../theme/default/styles";
 
 const title = [
     {id: 1, titles: 'You will benefit from our SaaS marketing product'},
@@ -84,8 +85,13 @@ class SwiperBar extends Component {
                 {title.map((item) => (
                     <SwiperSlide key={item.id} className="swiper">
                         <SliderCard>
-                            <h3>{item.titles}</h3>
-                            <p>{descriptionText[item.id - 1].descriptions}</p>
+                            <TitleSlide>{item.titles}</TitleSlide>
+                            <SubTitleSlide>{descriptionText[item.id - 1].descriptions}</SubTitleSlide>
+                            <CircleWithNumber height="219" width="219">
+                                <circle cx="210" cy="210" r="110" fill={colors.solitude}/>
+                                <text x="170" y="190" fontWeight="900" textAnchor="middle"
+                                      fill="white" fontSize="48">{item.id}</text>
+                            </CircleWithNumber>
                         </SliderCard>
                     </SwiperSlide>
                 ))}
