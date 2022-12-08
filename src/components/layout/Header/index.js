@@ -1,13 +1,17 @@
 import React from "react";
+import Logo from "../../icons/logo";
+import {Header} from "./styles";
+import Sandwich from "../../icons/sandwich";
 
-class Header extends React.Component {
+class HeaderComponent extends React.Component {
     render() {
         return (
-            <div>
-                <h1>Header</h1>
-            </div>
+            <Header>
+                <Logo/>
+                <Sandwich/>
+            </Header>
         );
     }
 }
 
-export default Header;
+export default HeaderComponent;
