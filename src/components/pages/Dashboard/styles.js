@@ -28,4 +28,16 @@ export const TextAbout = styled.div`
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
+  text-align: ${props => props.textAlign || 'left'};
+`;
+
+export const LogoArea = styled.div`
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+`;
+
+export const LogoCompany = styled.img`
+  margin: 5px;
 `;

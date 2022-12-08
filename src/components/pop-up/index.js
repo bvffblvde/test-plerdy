@@ -1,4 +1,5 @@
 import React from "react";
+import {Button} from "./styles";
 
 type State = {
     isModalOpen: boolean,
@@ -23,14 +24,13 @@ class PopUp extends React.Component<State> {
 
     renderPopUpButton = () => {
         return (
-            <button type="button"
-                    className="btn btn-primary"
+            <Button type="button"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                     onClick={this.openModal}
             >
-                Launch demo modal
-            </button>
+                Run the Plerdy tool
+            </Button>
         );
     }
 

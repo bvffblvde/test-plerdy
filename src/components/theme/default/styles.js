@@ -7,6 +7,7 @@ const colors = {
     midnight: '#001E41',
     gray: '#909090',
     sooGray: '#919191',
+    dodgerBlue: '#5D78FF',
 };
 
 const sizes = {
