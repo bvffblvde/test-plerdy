@@ -2,6 +2,8 @@ import React from "react";
 import PopUp from "../../pop-up";
 import {Card, LogoArea, LogoCompany, TextAbout, Title} from "./styles";
 import {colors} from "../../theme/default/styles";
+import SwiperBar from "../../Slider";
+import {Button} from "../../pop-up/styles";
 
 class Dashboard extends React.Component {
     render() {
@@ -33,6 +35,8 @@ class Dashboard extends React.Component {
                         <LogoCompany src={require('../../icons/default-icons/urkPostLogo.svg').default}  alt="ukr-post-logo"/>
                     </LogoArea>
                 </Card>
+                <SwiperBar/>
+                <Button>Bust my website conversion</Button>
             </div>
         );
     }

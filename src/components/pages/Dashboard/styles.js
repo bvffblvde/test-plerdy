@@ -5,16 +5,9 @@ export const Card = styled.div`
   border-radius: 10px;
   width: 100%;
   height: 100%;
-  background-color: ${colors.pattensBlue};
-  margin: 10px;
+  background-color: ${props => props.backgroundColor || colors.pattensBlue};
+  margin: ${props => props.margin || "10px"};
   padding: 20px 10px;
-  
-  .background-sales {
-    background-image: url("../../icons/default-icons/urkPostLogo.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
 `;
 
 export const Title = styled.span`
