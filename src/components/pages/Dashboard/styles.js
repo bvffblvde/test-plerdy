@@ -33,6 +33,7 @@ export const TextAbout = styled.div`
   
   .default-text {
     color: ${colors.sooGray};
+    line-height: initial;
   }
 `;
 
@@ -41,13 +42,83 @@ export const LogoArea = styled.div`
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-top: 5px;
+  margin-top: ${props => props.marginTop || '5px'};
+  
+  .analytic-icon {
+    animation-name: Appearance;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(.1, -.6, .2, 0);
+
+    @-webkit-keyframes Appearance {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-o-keyframes Appearance {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes Appearance {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes Appearance {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    
+  }
 `;
 
 export const LogoCompany = styled.img`
-  margin: 5px;
+  margin: ${props => props.margin || '5px'};
 `;
 
 export const ReasonsArea = styled.div`
- margin: 40px 10px 0;
+ margin: 20px 0 0;
 `;
+
+export const AnalyticIconFirst = styled.img`
+  float: left;
+  padding-left: 35px;
+  margin-right: -100%;
+  top: -25px;
+  position: relative;
+  z-index: 1;
+`;
+
+export const AnalyticIconSecond = styled.img`
+  float: left;
+  padding-left: 25px;
+  margin-right: -100%;
+  top: 170px;
+  position: relative;
+  z-index: 1;
+`;
+
+export const AnalyticIconThird = styled.img`
+  float: left;
+  padding-left: 210px;
+  margin-right: -100%;
+  top: 40px;
+  position: relative;
+  z-index: 1;
+`;
+

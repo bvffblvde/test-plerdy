@@ -1,14 +1,23 @@
 import React from "react";
-import PopUp from "../../pop-up";
-import {Card, LogoArea, LogoCompany, ReasonsArea, TextAbout, Title} from "./styles";
+import {
+    AnalyticIconFirst, AnalyticIconSecond, AnalyticIconThird,
+    Card,
+    LogoArea,
+    LogoCompany,
+    ReasonsArea,
+    TextAbout,
+    Title
+} from "./styles";
 import {colors} from "../../theme/default/styles";
 import SwiperBar from "../../Slider";
 import {Button} from "../../pop-up/styles";
+import PopUp from "../../pop-up";
 
 class Dashboard extends React.Component {
+
     render() {
         return (
-            <div>
+            <>
                 <Card>
                     <Title>
                         How to do a Website Audit to Improve SEO & Conversions
@@ -23,7 +32,7 @@ class Dashboard extends React.Component {
                         Thus, you'll compile a list of flaws in your website interface, navigation, and conversion path
                         that can eventually affect its micro and macro conversion rates.
                     </TextAbout>
-                    <PopUp isModalOpen={true}/>
+                    <PopUp isModalOpen={false}/>
                     <TextAbout textAlign="center">
                         Trusted by some of the world's largest enterprises
                     </TextAbout>
@@ -38,25 +47,39 @@ class Dashboard extends React.Component {
                         <LogoCompany src={require('../../icons/default-icons/urkPostLogo.svg').default}
                                      alt="ukr-post-logo"/>
                     </LogoArea>
+                    <LogoArea marginTop="30px">
+                        <div>
+                            <AnalyticIconFirst src={require('../../icons/default-icons/analytic1.svg').default}
+                                               alt="analytic1"
+                                               className="analytic-icon"/>
+                            <AnalyticIconSecond src={require('../../icons/default-icons/analytic2.svg').default}
+                                                alt="analytic2"
+                                                className="analytic-icon"/>
+                            <AnalyticIconThird src={require('../../icons/default-icons/analytic3.svg').default}
+                                               alt="analytic3"
+                                               className="analytic-icon"/>
+                            <img
+                                src={require('../../icons/default-icons/background-sales.svg').default}
+                                alt="sales"
+                            />
+                        </div>
+                    </LogoArea>
                 </Card>
-                <>
+                <Card backgroundColor="transparent">
                     <ReasonsArea>
                         <TextAbout marginTop="0" fontSize="20px">
                             6 Reasons <span
                             className="default-text"> to Use Plerdy Data for a Website Usability Audit </span>
                         </TextAbout>
-
                     </ReasonsArea>
-                </>
-                <SwiperBar/>
-                <div>
+                    <SwiperBar/>
                     <Button>Bust my website conversion</Button>
-                    <TextAbout color={colors.midnight} margin="10px">
+                    <TextAbout color={colors.midnight} margin="10px" textAlign="center">
                         So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your
                         website users’ behavior patterns and needs.
                     </TextAbout>
-                </div>
-            </div>
+                </Card>
+            </>
         );
     }
 }

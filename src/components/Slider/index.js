@@ -84,15 +84,15 @@ class SwiperBar extends Component {
             >
                 {title.map((item) => (
                     <SwiperSlide key={item.id} className="swiper">
-                        <SliderCard>
-                            <TitleSlide>{item.titles}</TitleSlide>
-                            <SubTitleSlide>{descriptionText[item.id - 1].descriptions}</SubTitleSlide>
-                            <CircleWithNumber height="219" width="219">
-                                <circle cx="210" cy="210" r="110" fill={colors.solitude}/>
-                                <text x="170" y="190" fontWeight="900" textAnchor="middle"
-                                      fill="white" fontSize="48">{item.id}</text>
-                            </CircleWithNumber>
-                        </SliderCard>
+                            <SliderCard>
+                                <TitleSlide>{item.titles}</TitleSlide>
+                                <SubTitleSlide>{descriptionText[item.id - 1].descriptions}</SubTitleSlide>
+                                <CircleWithNumber height="219" width="219">
+                                    <circle cx="210" cy="210" r="110" fill={colors.solitude}/>
+                                    <text x="170" y="190" fontWeight="900" textAnchor="middle"
+                                          fill="white" fontSize="48">{item.id}</text>
+                                </CircleWithNumber>
+                            </SliderCard>
                     </SwiperSlide>
                 ))}
             </Swiper>

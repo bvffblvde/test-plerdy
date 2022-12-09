@@ -20,3 +20,33 @@ export const Button = styled.button`
   line-height: 130%;
   letter-spacing: 0.0025em;
 `;
+
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+`;
+
+export const ModalContent = styled.div`
+  width: 400px;
+  height: 400px;
+  margin: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+`;
+
+export const ModalHeader = styled.div`
+  padding: 10px;
+`;
+
+export const ModalBody = styled.div`
+  padding: 10px;
+`;

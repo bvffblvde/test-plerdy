@@ -5,18 +5,19 @@ export const SliderCard = styled.div`
   border-radius: 10px;
   height: 372px;
   background-color: ${colors.athensGray};
-  margin: 15px 10px 40px;
-  padding: 20px 0 20px 20px;
   isolation: isolate;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-top: 15px;
 `;
 
 export const TitleSlide = styled.div`
   font-weight: 600;
   font-size: 17px;
   line-height: 150%;
-  margin-bottom: 20px;
   color: ${colors.midnight};
   margin-right: 20px;
+  margin-bottom: 20px;
 `;
 
 export const SubTitleSlide = styled.div`
@@ -29,13 +30,16 @@ export const SubTitleSlide = styled.div`
 
 // TODO FIX THIS FCKING CIRCLE
 export const CircleWithNumber = styled.svg`
-  position: absolute;
-  width: 219px;
-  height: 219px;
-  top: 210px;
-  left: 323px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 
   @media (min-width: ${sizes.tablet}px) {
-  left: 270px;
-}
+    // left: 270px;
+  }
+`;
+
+export const Container = styled.div`
+  margin: 15px 10px 40px;
+  padding: 20px 0 20px 20px;
 `;

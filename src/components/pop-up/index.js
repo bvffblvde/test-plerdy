@@ -1,5 +1,5 @@
 import React from "react";
-import {Button} from "./styles";
+import {Button, Modal, ModalBody, ModalContent, ModalHeader} from "./styles";
 
 type State = {
     isModalOpen: boolean,
@@ -36,27 +36,24 @@ class PopUp extends React.Component<State> {
 
     renderPopUp = () => {
         return (
-            <div className="modal fade show" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                    onClick={this.closeModal}></button>
-                        </div>
-                        <div className="modal-body">
-                            ...
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"
-                                    onClick={this.closeModal}>Close
-                            </button>
-                            <button type="button" className="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Modal>
+                <ModalContent>
+                    <ModalHeader>
+                        <h5 className="modal-title">Modal title</h5>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                onClick={this.closeModal}/>
+                    </ModalHeader>
+                    <ModalBody className="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </ModalBody>
+                    <ModalHeader>
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"
+                                onClick={this.closeModal}>Close
+                        </button>
+                        <button type="button" className="btn btn-primary">Save changes</button>
+                    </ModalHeader>
+                </ModalContent>
+            </Modal>
         );
     }
 
