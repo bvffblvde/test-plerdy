@@ -31,18 +31,18 @@ export const Modal = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  // background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
+  
 `;
 
 export const ModalContent = styled.div`
   margin: 30px;
   background-color: white;
   border-radius: 11px;
-  // padding: 31.5px;
 `;
 
 export const ModalHeader = styled.div`
@@ -80,7 +80,21 @@ export const ModalFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px 30px 0 30px;
+  
+  text {
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9.75px;
+    line-height: 11px;
+    color: ${colors.sooGray};
+  }
+  
+  a {
+    color: ${colors.dodgerBlue};
+    text-decoration: none;
+  }
 `;
 
 export const ButtonsArea = styled.div`
@@ -125,15 +139,18 @@ export const FormFieldStyled = styled.input(() => css`
   color: ${colors.silver};
   background: none;
   width: 100%;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 10.5px;
+  line-height: 150%;
 `);
 
 export const Wrapper = styled.div((props) => css`
   display: flex;
   margin: 3px 0 6px 0;
-  border: 0.75px solid ${colors.iron};
-  padding: 10px 12px;
+  border: 0.75px solid;
+  padding: 6px 9px;
   border-radius: 10px;
+  border-color: ${props.invalid ? colors.redApple : colors.silver};
 
   &:focus-within {
     outline: none;

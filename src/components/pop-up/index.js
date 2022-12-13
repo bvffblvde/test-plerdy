@@ -15,6 +15,7 @@ import {
 } from "./styles";
 import {validateForm} from "./validate";
 import {Field, Form} from "react-final-form";
+import {LogoArea, LogoCompany} from "../pages/Dashboard/styles";
 
 
 type Props = {
@@ -73,13 +74,14 @@ class PopUp extends React.Component<Props, State> {
                                   <LabelInput htmlFor="phoneNumber">Name</LabelInput>
                                   <Wrapper>
                                       <FormFieldStyled
-                                      type="text"
-                                      id="name"
-                                      name="name"
-                                      placeholder="Boris Johnson"
-                                      {...input}
-                                  />
-                                      </Wrapper>
+                                          type="text"
+                                          id="name"
+                                          name="name"
+                                          placeholder="Boris Johnson"
+                                          invalid={meta.error && meta.touched}
+                                          {...input}
+                                      />
+                                  </Wrapper>
                                   {meta.error && meta.touched && <Errors>{meta.error}</Errors>}
                               </div>
                           )}
@@ -89,13 +91,14 @@ class PopUp extends React.Component<Props, State> {
                               <div>
                                   <LabelInput htmlFor="phoneNumber">Phone Number</LabelInput>
                                   <Wrapper>
-                                  <FormFieldStyled
-                                      type="text"
-                                      name="phoneNumber"
-                                      id="phoneNumber"
-                                      placeholder="XX XXX XXXX"
-                                      {...input}
-                                  />
+                                      <FormFieldStyled
+                                          type="text"
+                                          name="phoneNumber"
+                                          id="phoneNumber"
+                                          placeholder="XX XXX XXXX"
+                                          invalid={meta.error && meta.touched}
+                                          {...input}
+                                      />
                                   </Wrapper>
                                   {meta.error && meta.touched && <Errors>{meta.error}</Errors>}
                               </div>
@@ -130,6 +133,7 @@ class PopUp extends React.Component<Props, State> {
     renderPopUp = () => {
         return (
             <Modal>
+                <img src={require('../../../src/components/icons/default-icons/Pic.png').default} alt="logo"/>
                 <ModalContent>
                     <CloseButtonArea>
                         <img src={require('../../../src/components/icons/close-button/close.svg').default} alt="close"
@@ -145,7 +149,15 @@ class PopUp extends React.Component<Props, State> {
                         <Form render={this.renderFieldForm} onSubmit={onSubmit}/>
                     </FormArea>
                     <ModalFooter>
+                        <input type="checkbox" id="agree" name="agree" value="agree"/>
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                        <text>By sending up? you agree to our <a href="#">Conditions</a> and <a href="#">Privacy
+                            Policy</a></text>
                     </ModalFooter>
+                    <LogoArea>
+                        <LogoCompany src={require('../../../src/components/icons/logo/LogoModal.svg').default}
+                                     alt="logo-modal"/>
+                    </LogoArea>
                 </ModalContent>
             </Modal>
         );
