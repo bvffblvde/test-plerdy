@@ -13,12 +13,12 @@ import {CircleWithNumber, SliderCard, SubTitleSlide, TitleSlide} from "./styles"
 import {colors} from "../theme/default/styles";
 
 const title = [
-    {id: 1, titles: 'You will benefit from our SaaS marketing product'},
-    {id: 2, titles: 'We have 10+ years of experience in digital marketing'},
-    {id: 3, titles: 'We enable generating hypotheses about what leads to low website conversions'},
-    {id: 4, titles: 'The analysis of the dynamic elements of the website'},
-    {id: 5, titles: 'The analysis of both the desktop and mobile versions of the website'},
-    {id: 6, titles: 'The analysis of the dynamic elements of the website!'},
+    {id: 1, label: 'You will benefit from our SaaS marketing product'},
+    {id: 2, label: 'We have 10+ years of experience in digital marketing'},
+    {id: 3, label: 'We enable generating hypotheses about what leads to low website conversions'},
+    {id: 4, label: 'The analysis of the dynamic elements of the website'},
+    {id: 5, label: 'The analysis of both the desktop and mobile versions of the website'},
+    {id: 6, label: 'The analysis of the dynamic elements of the website!'},
 ];
 
 const descriptionText = [
@@ -75,7 +75,7 @@ class SwiperBar extends Component {
             <Swiper
                 breakpoints={breakpoints}
                 modules={[Navigation, Pagination, Scrollbar, A11y, Grid, EffectCards]}
-                spaceBetween={0}
+                spaceBetween={10}
                 resistance={false}
                 // navigation
                 pagination={{clickable: true}}
@@ -85,7 +85,7 @@ class SwiperBar extends Component {
                 {title.map((item) => (
                     <SwiperSlide key={item.id} className="swiper">
                             <SliderCard>
-                                <TitleSlide>{item.titles}</TitleSlide>
+                                <TitleSlide>{item.label}</TitleSlide>
                                 <SubTitleSlide>{descriptionText[item.id - 1].descriptions}</SubTitleSlide>
                                 <CircleWithNumber height="219" width="219">
                                     <circle cx="210" cy="210" r="110" fill={colors.solitude}/>

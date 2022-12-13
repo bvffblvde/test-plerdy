@@ -10,7 +10,6 @@ import {
 } from "./styles";
 import {colors} from "../../theme/default/styles";
 import SwiperBar from "../../Slider";
-import {Button} from "../../pop-up/styles";
 import PopUp from "../../pop-up";
 
 class Dashboard extends React.Component {
@@ -32,7 +31,7 @@ class Dashboard extends React.Component {
                         Thus, you'll compile a list of flaws in your website interface, navigation, and conversion path
                         that can eventually affect its micro and macro conversion rates.
                     </TextAbout>
-                    <PopUp isModalOpen={false}/>
+                    <PopUp isModalOpen={false} title="Run the Plerdy tool"/>
                     <TextAbout textAlign="center">
                         Trusted by some of the world's largest enterprises
                     </TextAbout>
@@ -48,7 +47,6 @@ class Dashboard extends React.Component {
                                      alt="ukr-post-logo"/>
                     </LogoArea>
                     <LogoArea marginTop="30px">
-                        <div>
                             <AnalyticIconFirst src={require('../../icons/default-icons/analytic1.svg').default}
                                                alt="analytic1"
                                                className="analytic-icon"/>
@@ -62,7 +60,6 @@ class Dashboard extends React.Component {
                                 src={require('../../icons/default-icons/background-sales.svg').default}
                                 alt="sales"
                             />
-                        </div>
                     </LogoArea>
                 </Card>
                 <Card backgroundColor="transparent">
@@ -73,7 +70,7 @@ class Dashboard extends React.Component {
                         </TextAbout>
                     </ReasonsArea>
                     <SwiperBar/>
-                    <Button>Bust my website conversion</Button>
+                    <PopUp isModalOpen={false} title="Boost my website conversion"/>
                     <TextAbout color={colors.midnight} margin="10px" textAlign="center">
                         So, it’s high time for you to stop losing 99% of potential clients due to being unaware of your
                         website users’ behavior patterns and needs.

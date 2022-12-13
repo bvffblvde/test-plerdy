@@ -8,6 +8,10 @@ const colors = {
     gray: '#909090',
     sooGray: '#919191',
     dodgerBlue: '#5D78FF',
+    iron: '#D5D5D6',
+    redApple: '#FF5D5D',
+    silver: '#BDBDBD',
+    anakiwa: '#AED1FF',
 };
 
 const sizes = {

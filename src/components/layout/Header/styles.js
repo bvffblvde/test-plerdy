@@ -12,4 +12,5 @@ export const Header = styled.div`
   justify-content: space-between;
   padding: 0 20px;
   border-bottom: 1px solid ${colors.mercury};
+  z-index: 10;
 `;
